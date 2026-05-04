@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seedance · 雀巢咖啡 × 长安十二时辰 案例</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.case-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #2563eb 100%);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.case-hero::before {
+  content: ""; position: absolute; top:-30%; left:-10%; right:-10%;
+  height: 200px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(96,165,250,0.12), transparent 70%);
+  pointer-events: none;
+}
+.case-hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 14px; background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 20px;
+  font-size: 11px; color: #93c5fd; letter-spacing: 0.08em;
+  margin-bottom: 16px; backdrop-filter: blur(4px);
+}
+.case-hero-title {
+  font-family: var(--font-cn-serif); font-size: 40px; font-weight: 700;
+  color: #fff; letter-spacing: 0.04em; margin-bottom: 10px; line-height: 1.3;
+}
+.case-hero-title em { font-style: normal; color: #60a5fa; }
+.case-hero-sub {
+  font-size: 15px; color: rgba(255,255,255,0.6);
+  max-width: 600px; margin: 0 auto 24px; line-height: 1.7;
+}
+.case-hero-meta { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.case-hero-meta-item { text-align: center; }
+.case-hero-meta-val { font-family: var(--font-cn-serif); font-size: 20px; font-weight: 700; color: #60a5fa; line-height: 1; margin-bottom: 4px; }
+.case-hero-meta-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; }
+
+.case-section { margin-bottom: 28px; }
+.case-section-title {
+  font-family: var(--font-cn-serif); font-size: 22px; font-weight: 700;
+  color: var(--ink); margin-bottom: 16px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+}
+.case-section-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.8; margin-bottom: 16px; }
+
+.process-flow {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin-bottom: 20px;
+}
+.process-step {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px;
+  text-align: center; transition: all var(--transition-base);
+}
+.process-step:hover { border-color: var(--primary); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.process-step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--primary); color: #fff; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px; font-size: 14px;
+}
+.process-step-title { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.process-step-desc { font-size: 12px; color: var(--ink-soft); line-height: 1.6; }
+
+.data-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  margin-bottom: 20px;
+}
+.data-card {
+  background: linear-gradient(135deg, #fff, var(--primary-soft));
+  border: 1px solid #bfdbfe; border-radius: var(--radius-lg);
+  padding: 20px; text-align: center;
+}
+.data-card-val { font-family: var(--font-cn-serif); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1; margin-bottom: 6px; }
+.data-card-label { font-size: 12px; color: var(--ink-soft); }
+.data-card-compare { font-size: 11px; color: var(--success); font-weight: 600; margin-top: 6px; }
+
+.price-breakdown-case {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.price-row-case {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; border-bottom: 1px dashed var(--border);
+}
+.price-row-case:last-child { border-bottom: none; }
+.price-row-case-label b { display: block; font-size: 14px; color: var(--ink); margin-bottom: 2px; }
+.price-row-case-label span { font-size: 11px; color: var(--ink-dim); }
+.price-row-case-val { font-family: var(--font-cn-serif); font-size: 16px; font-weight: 700; color: var(--primary); }
+
+.tech-stack {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.tech-item {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 18px; text-align: center;
+}
+.tech-item-icon { font-size: 28px; margin-bottom: 8px; }
+.tech-item-name { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.tech-item-desc { font-size: 11px; color: var(--ink-soft); line-height: 1.5; }
+
+@media (max-width: 1024px) {
+  .process-flow { grid-template-columns: 1fr; }
+  .data-grid { grid-template-columns: repeat(2, 1fr); }
+  .tech-stack { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .case-hero { padding: 32px 20px; }
+  .case-hero-title { font-size: 28px; }
+  .data-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body data-page="new">
+
+<div class="app">
+
+  <!-- 侧边栏 -->
+  <aside class="sidebar">
+    <a href="index.html" style="text-decoration:none;color:inherit;">
+      <div class="logo">Seedance<small>AI AD STUDIO</small></div>
+    </a>
+    <div class="nav-group">
+      <div class="nav-label">创作</div>
+      <a class="nav-item" href="index.html"><span class="dot" style="opacity:0.3"></span>新建番外广告</a>
+      <a class="nav-item" href="drafts.html"><span class="dot" style="opacity:0.3"></span>我的草稿</a>
+      <a class="nav-item" href="published.html"><span class="dot" style="opacity:0.3"></span>已投放</a>
+      <a class="nav-item active" href="seedance-case.html"><span class="dot"></span>Seedance 案例</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">数据</div>
+      <a class="nav-item" href="dashboard.html"><span class="dot" style="opacity:0.3"></span>投放看板</a>
+      <a class="nav-item" href="analytics.html"><span class="dot" style="opacity:0.3"></span>成效分析</a>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">账户</div>
+      <a class="nav-item" href="enterprise.html"><span class="dot" style="opacity:0.3"></span>企业认证</a>
+      <a class="nav-item" href="billing.html"><span class="dot" style="opacity:0.3"></span>发票 & 结算</a>
+    </div>
+    <div class="sidebar-footer">
+      <div class="avatar">雀</div>
+      <div class="user-info">
+        <div class="user-name">雀巢咖啡</div>
+        <div class="user-type">企业账户 · VIP</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <!-- Hero -->
+    <div class="case-hero">
+      <div class="case-hero-badge">✨ Seedance AI 番外广告 · 成功案例</div>
+      <h1 class="case-hero-title">雀巢咖啡 × 《长安十二时辰》<br><em>《一杯长安》</em></h1>
+      <p class="case-hero-sub">基于 Seedance AI 技术，2 分钟生成品牌定制番外。张小敬与李必的古今交融，让咖啡植入成为剧情本身。</p>
+      <div class="case-hero-meta">
+        <div class="case-hero-meta-item">
+          <div class="case-hero-meta-val">32 秒</div>
+          <div class="case-hero-meta-label">AI 生成时长</div>
+        </div>
+        <div class="case-hero-meta-item">
+          <div class="case-hero-meta-val">2 分钟</div>
+          <div class="case-hero-meta-label">番外总时长</div>
+        </div>
+        <div class="case-hero-meta-item">
+          <div class="case-hero-meta-val">83%</div>
+          <div class="case-hero-meta-label">完播率</div>
+        </div>
+        <div class="case-hero-meta-item">
+          <div class="case-hero-meta-val">4.6×</div>
+          <div class="case-hero-meta-label">ROI</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 案例背景 -->
+    <div class="card">
+      <div class="case-section-title">📖 案例背景</div>
+      <p class="case-section-desc">
+        雀巢咖啡希望借助古装剧IP推广其新品"冰萃即溶咖啡"，目标人群为 25-35 岁都市白领。经 Seedance 平台分析推荐，选择《长安十二时辰》进行合作——该剧男性观众占比 62%，与咖啡消费人群高度重合。
+      </p>
+      <p class="case-section-desc">
+        最终方案：张小敬（雷佳音 饰）在长安街头办案疲惫时，李必（易烊千玺 饰）递上一杯现代雀巢冰萃咖啡。以"古今交融"的概念，将"提神醒脑"的产品卖点自然融入剧情。
+      </p>
+    </div>
+
+    <!-- AI 生成流程 -->
+    <div class="card">
+      <div class="case-section-title">⚡ AI 生成流程</div>
+      <p class="case-section-desc" style="margin-bottom:20px;">
+        Seedance AI 平台三步生成，全程自动化，品牌方只需确认审核。
+      </p>
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="process-step-num">1</div>
+          <div class="process-step-title">选择剧集与演员</div>
+          <div class="process-step-desc">品牌方选择《长安十二时辰》，勾选张小敬、李必两位角色，系统自动显示肖像授权费用</div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">2</div>
+          <div class="process-step-title">填写品牌 Brief</div>
+          <div class="process-step-desc">上传雀巢冰萃咖啡商品图，填写场景描述：张小敬办案疲惫，李必递上一杯咖啡</div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">3</div>
+          <div class="process-step-title">AI 生成番外</div>
+          <div class="process-step-desc">Seedance AI 32秒生成 3 版候选方案，分幕脚本、关键帧、报价同步输出</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 数据效果 -->
+    <div class="card">
+      <div class="case-section-title">📊 投放数据</div>
+      <p class="case-section-desc" style="margin-bottom:20px;">
+        该番外于 2026 年 3 月上线，挂载在《长安十二时辰》剧集详情页"番外"专区。
+      </p>
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="data-card-val">83%</div>
+          <div class="data-card-label">完播率</div>
+          <div class="data-card-compare">↑ 前贴片 23%</div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-val">4.6×</div>
+          <div class="data-card-label">ROI</div>
+          <div class="data-card-compare">行业平均 1.4×</div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-val">3,280 万</div>
+          <div class="data-card-label">总播放量</div>
+          <div class="data-card-compare">上线 30 天</div>
+        </div>
+        <div class="data-card">
+          <div class="data-card-val">+246%</div>
+          <div class="data-card-label">品牌搜索提升</div>
+          <div class="data-card-compare">雀巢咖啡关键词</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分幕脚本 -->
+    <div class="card">
+      <div class="case-section-title">🎬 分幕脚本 · 《一杯长安》</div>
+      <div class="storyboard">
+        <div class="scene">
+          <div class="scene-num">壹</div>
+          <div class="scene-body">
+            <div class="scene-title">长安街头 · 午时三刻</div>
+            <div class="scene-desc">张小敬穿梭于长安西市，刚办完一桩大案，额角渗出细汗。他倚在桥栏边，眉宇间满是疲惫。画外音："长安一日，抵得上凡人一生。"</div>
+            <div class="scene-tags">
+              <span class="tag tag-primary">场景:长安西市</span>
+              <span class="tag tag-gold">情绪:疲惫</span>
+            </div>
+          </div>
+          <div class="scene-right">
+            <span class="scene-duration">40"</span>
+            <span class="scene-duration-label">Duration</span>
+          </div>
+        </div>
+        <div class="scene">
+          <div class="scene-num">贰</div>
+          <div class="scene-body">
+            <div class="scene-title">递咖啡 · 古今交融</div>
+            <div class="scene-desc">李必策马而来，翻身下马，从袖中取出一杯雀巢冰萃咖啡递上。"听闻此物提神醒脑，大人不妨一试。"张小敬接过，看着杯中琥珀色液体，一饮而尽。<b style="color:var(--primary)">特写 3 秒</b>:杯身"雀巢咖啡"标识清晰可见。</div>
+            <div class="scene-tags">
+              <span class="tag tag-primary">品牌露出:特写 3 秒</span>
+              <span class="tag tag-gold">情绪:惊喜/温暖</span>
+            </div>
+          </div>
+          <div class="scene-right">
+            <span class="scene-duration">50"</span>
+            <span class="scene-duration-label">Duration</span>
+          </div>
+        </div>
+        <div class="scene">
+          <div class="scene-num">叁</div>
+          <div class="scene-body">
+            <div class="scene-title">策马前行 · 焕然一新</div>
+            <div class="scene-desc">张小敬精神一振，翻身上马，与李必并肩驰骋。旁白:"长安十二时辰，一杯咖啡的时间就够了。"品牌 slogan 以水墨风格在画面中浮现。</div>
+            <div class="scene-tags">
+              <span class="tag tag-primary">品牌露出:slogan 收尾</span>
+              <span class="tag tag-gold">情绪:振奋/希望</span>
+            </div>
+          </div>
+          <div class="scene-right">
+            <span class="scene-duration">30"</span>
+            <span class="scene-duration-label">Duration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 费用明细 -->
+    <div class="card">
+      <div class="case-section-title">💰 费用明细</div>
+      <p class="case-section-desc" style="margin-bottom:16px;">
+        透明分成模式，品牌方仅需一次支付，覆盖制作 + 投放 + 版权全部费用。
+      </p>
+      <div class="price-breakdown-case">
+        <div class="price-row-case">
+          <div class="price-row-case-label"><b>基础制作费</b><span>AI 文生视频 · 角色克隆 · 后期 · 2 分钟</span></div>
+          <div class="price-row-case-val">¥ 6.0 万</div>
+        </div>
+        <div class="price-row-case">
+          <div class="price-row-case-label"><b>演员肖像权分成</b><span>雷佳音 + 易烊千玺 · 双主演</span></div>
+          <div class="price-row-case-val">¥ 4.5 万</div>
+        </div>
+        <div class="price-row-case">
+          <div class="price-row-case-label"><b>IP 版权费</b><span>《长安十二时辰》IP 使用 · 留白影视</span></div>
+          <div class="price-row-case-val">¥ 2.8 万</div>
+        </div>
+        <div class="price-row-case">
+          <div class="price-row-case-label"><b>投放曝光费</b><span>番外专区推荐位 · 预估 600 万曝光</span></div>
+          <div class="price-row-case-val">¥ 6.7 万</div>
+        </div>
+        <div class="price-row-case" style="background:var(--primary-soft);border-top:2px solid var(--primary);">
+          <div class="price-row-case-label"><b>项目总报价</b><span style="color:var(--ink);">预估 ROI 4.6× · 预计 10 天内上线</span></div>
+          <div class="price-row-case-val" style="font-size:24px;color:var(--primary);">¥ 20.0 万</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seedance 技术说明 -->
+    <div class="card">
+      <div class="case-section-title">🛠️ Seedance AI 技术能力</div>
+      <p class="case-section-desc" style="margin-bottom:20px;">
+        本案例由 Seedance AI 番外广告创作平台全流程支撑。
+      </p>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <div class="tech-item-icon">🧠</div>
+          <div class="tech-item-name">AI 叙事生成</div>
+          <div class="tech-item-desc">基于剧集世界观与角色关系，自动生成符合 IP 调性的叙事结构</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-icon">🎭</div>
+          <div class="tech-item-name">AIGC 肖像合成</div>
+          <div class="tech-item-desc">签约演员肖像授权 + AI 驱动角色动作与表情合成</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-icon">🎬</div>
+          <div class="tech-item-name">文生视频引擎</div>
+          <div class="tech-item-desc">根据分幕脚本自动生成关键帧与视频片段，支持多版本对比</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-icon">📊</div>
+          <div class="tech-item-name">智能定价系统</div>
+          <div class="tech-item-desc">实时计算制作+肖像+版权+投放费用，支持手动调节参数</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-icon">🔍</div>
+          <div class="tech-item-name">品牌匹配分析</div>
+          <div class="tech-item-desc">AI 自动评估品牌与剧集、角色的匹配度，推荐最优方案</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item-icon">⚡</div>
+          <div class="tech-item-name">32 秒极速生成</div>
+          <div class="tech-item-desc">从 Brief 到 3 版方案 + 报价，全过程不超过 32 秒</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 结语 -->
+    <div class="action-bar" style="margin-top:24px;">
+      <div class="action-left">💡 想为你的品牌定制番外广告？点击下方按钮开始创作</div>
+      <div>
+        <a href="index.html" class="btn btn-primary">✨ 立即创作</a>
+        <a href="index.html" class="btn btn-secondary">查看完整 Demo</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <b>※ Demo 原型说明</b>:本案例为概念演示，演员肖像权使用协议、IP 分成比例、具体价格模型均为示意性设计。实际落地需与留白影视、各主演工作室签订正式协议。
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
