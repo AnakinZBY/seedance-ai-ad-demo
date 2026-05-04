@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的草稿 · 腾讯视频 AD Studio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="drafts">
+
+<div class="app">
+  <div id="sidebar-mount"></div>
+
+  <main class="main">
+
+    <div class="breadcrumb">
+      <span>创作</span>
+      <span class="sep">›</span>
+      <span>我的草稿</span>
+    </div>
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">我的草稿</h1>
+        <p class="page-sub">尚未提交审核的番外订单,可继续编辑或删除 · 草稿保留 30 天</p>
+      </div>
+      <div>
+        <button class="btn btn-ghost" data-toast="已清理 7 天前的过期草稿">🗑 清理过期</button>
+        <a class="btn btn-primary" href="index.html" style="text-decoration:none;">+ 新建番外</a>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">草稿总数</div>
+        <div class="kpi-val">5<span class="unit">条</span></div>
+        <div class="kpi-trend up">↑ 本周 +2</div>
+      </div>
+      <div class="kpi accent">
+        <div class="kpi-label">待提交审核</div>
+        <div class="kpi-val">3<span class="unit">条</span></div>
+        <div class="kpi-trend up">AI 已生成,等待确认</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">待完善 Brief</div>
+        <div class="kpi-val">2<span class="unit">条</span></div>
+        <div class="kpi-trend down">需补全必填项</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">预估总预算</div>
+        <div class="kpi-val">¥128.4<span class="unit">万</span></div>
+        <div class="kpi-trend up">5 条合计</div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search">
+        <input type="text" placeholder="搜索草稿名、IP、品牌...">
+      </div>
+      <div class="filter-group">
+        <button class="chip active">全部 5</button>
+        <button class="chip">已生成 3</button>
+        <button class="chip">待完善 2</button>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="list-cover">
+        <div class="list-cover-img" style="background-image:url('assets/fanxian.webp');"></div>
+        <div class="list-cover-play">▶</div>
+      </div>
+      <div class="list-body">
+        <div class="list-title">《一盏参汤暖人间》 · 《庆余年》番外</div>
+        <div class="list-sub">东方参源 · 人参水 · 方案 B · 家常温情 · 3 幕 3 分钟</div>
+        <div class="list-meta">
+          <span><b>¥24.8 万</b>预估</span>
+          <span><b>3 位</b>主演</span>
+          <span>创建于 04-28 09:12</span>
+          <span class="badge badge-reviewing">AI 已生成 · 待提交</span>
+        </div>
+      </div>
+      <div class="list-actions">
+        <a class="btn btn-primary" href="index.html" style="padding:8px 18px;font-size:12px;text-decoration:none;">继续创作 →</a>
+        <button class="btn btn-ghost" data-toast="草稿已复制" style="padding:6px 12px;font-size:11px;">复制</button>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="list-cover">
+        <div class="list-cover-img" style="background-image:url('assets/haitang.webp');"></div>
+        <div class="list-cover-play">▶</div>
+      </div>
+      <div class="list-body">
+        <div class="list-title">《北齐月夜·长歌未尽》 · 《庆余年》番外</div>
+        <div class="list-sub">东方参源 · 人参水 · 方案 A · 虐恋向 · 3 幕 3 分钟</div>
+        <div class="list-meta">
+          <span><b>¥22.4 万</b>预估</span>
+          <span><b>2 位</b>主演</span>
+          <span>创建于 04-27 16:40</span>
+          <span class="badge badge-reviewing">AI 已生成 · 待提交</span>
+        </div>
+      </div>
+      <div class="list-actions">
+        <a class="btn btn-primary" href="index.html" style="padding:8px 18px;font-size:12px;text-decoration:none;">继续创作 →</a>
+        <button class="btn btn-ghost" data-toast="草稿已删除" style="padding:6px 12px;font-size:11px;color:var(--accent);">删除</button>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="list-cover">
+        <div class="list-cover-img" style="background-image:url('assets/fansize.webp');"></div>
+        <div class="list-cover-play">▶</div>
+      </div>
+      <div class="list-body">
+        <div class="list-title">《除夕夜·范府团圆宴》 · 《庆余年》番外</div>
+        <div class="list-sub">东方参源 · 人参水 · 方案 C · 节日限定 · 3 幕 4 分钟</div>
+        <div class="list-meta">
+          <span><b>¥48.6 万</b>预估</span>
+          <span><b>7 位</b>主演</span>
+          <span>创建于 04-26 11:22</span>
+          <span class="badge badge-reviewing">AI 已生成 · 待提交</span>
+        </div>
+      </div>
+      <div class="list-actions">
+        <a class="btn btn-primary" href="index.html" style="padding:8px 18px;font-size:12px;text-decoration:none;">继续创作 →</a>
+        <button class="btn btn-ghost" style="padding:6px 12px;font-size:11px;" data-toast="已加入春节档排期队列">排期</button>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="list-cover">
+        <div class="list-cover-img" style="background-image:url('assets/linwaner.webp');filter:grayscale(0.3)"></div>
+      </div>
+      <div class="list-body">
+        <div class="list-title" style="color:var(--ink-soft);">未命名草稿 #20260425</div>
+        <div class="list-sub">品牌方:东方参源 · 仅完成 Step 1 (已选剧集《庆余年》)</div>
+        <div class="list-meta">
+          <span>尚未选择角色</span>
+          <span>尚未填写 Brief</span>
+          <span>创建于 04-25 14:08</span>
+          <span class="badge badge-draft">待完善 · 缺 Brief</span>
+        </div>
+      </div>
+      <div class="list-actions">
+        <a class="btn btn-secondary" href="index.html" style="padding:8px 18px;font-size:12px;text-decoration:none;">继续编辑</a>
+        <button class="btn btn-ghost" data-toast="草稿已删除" style="padding:6px 12px;font-size:11px;color:var(--accent);">删除</button>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="list-cover">
+        <div class="list-cover-img" style="background-image:url('assets/qingdi.webp');filter:grayscale(0.3)"></div>
+      </div>
+      <div class="list-body">
+        <div class="list-title" style="color:var(--ink-soft);">未命名草稿 #20260423</div>
+        <div class="list-sub">品牌方:东方参源 · 仅完成 Step 1-2 (剧集 + 角色:陈道明)</div>
+        <div class="list-meta">
+          <span><b>1 位</b>主演(陈道明)</span>
+          <span>未填写 Brief</span>
+          <span>创建于 04-23 10:55</span>
+          <span class="badge badge-draft">待完善 · 缺 Brief</span>
+        </div>
+      </div>
+      <div class="list-actions">
+        <a class="btn btn-secondary" href="index.html" style="padding:8px 18px;font-size:12px;text-decoration:none;">继续编辑</a>
+        <button class="btn btn-ghost" data-toast="草稿已删除" style="padding:6px 12px;font-size:11px;color:var(--accent);">删除</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="sidebar.js"></script>
+<script src="common.js"></script>
+
+</body>
+</html>
