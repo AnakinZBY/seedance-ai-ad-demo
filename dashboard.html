@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投放看板 · 腾讯视频 AD Studio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="dashboard">
+
+<div class="app">
+  <div id="sidebar-mount"></div>
+
+  <main class="main">
+
+    <div class="breadcrumb">
+      <span>数据</span>
+      <span class="sep">›</span>
+      <span>投放看板</span>
+    </div>
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">投放看板</h1>
+        <p class="page-sub">账户全局数据概览 · 数据每 5 分钟更新一次 · 上次更新 <span class="mono" style="color:var(--ink-soft)">14:32:18</span></p>
+      </div>
+      <div>
+        <div class="filter-group">
+          <button class="chip">今日</button>
+          <button class="chip active">近 7 天</button>
+          <button class="chip">近 30 天</button>
+          <button class="chip">自定义</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 核心 KPI -->
+    <div class="kpi-grid">
+      <div class="kpi accent">
+        <div class="kpi-label">总曝光</div>
+        <div class="kpi-val">1,284<span class="unit">万</span></div>
+        <div class="kpi-trend up">↑ 42% vs 上周</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">总播放</div>
+        <div class="kpi-val">756.2<span class="unit">万</span></div>
+        <div class="kpi-trend up">↑ 38% vs 上周</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">平均完播率</div>
+        <div class="kpi-val">79<span class="unit">%</span></div>
+        <div class="kpi-trend up">vs TVC 行业 23%</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">平均 ROI</div>
+        <div class="kpi-val">4.2<span class="unit">×</span></div>
+        <div class="kpi-trend up">↑ 0.3× vs 上周</div>
+      </div>
+    </div>
+
+    <!-- 趋势图 -->
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">播放量趋势 · 近 7 天</div>
+        <div class="chart-sub">所有在投作品合计 · 单位:万次</div>
+        <div class="chart-area">
+          <svg class="chart-svg" viewBox="0 0 560 220" preserveAspectRatio="none">
+            <!-- 网格线 -->
+            <line x1="40" y1="30"  x2="550" y2="30"  stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <line x1="40" y1="75"  x2="550" y2="75"  stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <line x1="40" y1="120" x2="550" y2="120" stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <line x1="40" y1="165" x2="550" y2="165" stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <!-- Y 轴标签 -->
+            <text x="6" y="34"  font-size="10" fill="#a39c88">200</text>
+            <text x="6" y="79"  font-size="10" fill="#a39c88">150</text>
+            <text x="6" y="124" font-size="10" fill="#a39c88">100</text>
+            <text x="6" y="169" font-size="10" fill="#a39c88">50</text>
+            <text x="14" y="200" font-size="10" fill="#a39c88">0</text>
+            <!-- X 轴标签 -->
+            <text x="55"  y="210" font-size="10" fill="#a39c88">04-22</text>
+            <text x="130" y="210" font-size="10" fill="#a39c88">04-23</text>
+            <text x="205" y="210" font-size="10" fill="#a39c88">04-24</text>
+            <text x="280" y="210" font-size="10" fill="#a39c88">04-25</text>
+            <text x="355" y="210" font-size="10" fill="#a39c88">04-26</text>
+            <text x="430" y="210" font-size="10" fill="#a39c88">04-27</text>
+            <text x="505" y="210" font-size="10" fill="#a39c88">04-28</text>
+
+            <!-- 填充区域 -->
+            <path d="M 70,170 L 150,140 L 230,150 L 310,95 L 390,60 L 470,50 L 540,30
+                     L 540,190 L 70,190 Z"
+                  fill="url(#areaGrad)" opacity="0.25"/>
+            <!-- 主线 -->
+            <path d="M 70,170 L 150,140 L 230,150 L 310,95 L 390,60 L 470,50 L 540,30"
+                  stroke="#b8431f" stroke-width="2.5" fill="none"/>
+            <!-- 节点 -->
+            <g fill="#b8431f">
+              <circle cx="70"  cy="170" r="3.5"/>
+              <circle cx="150" cy="140" r="3.5"/>
+              <circle cx="230" cy="150" r="3.5"/>
+              <circle cx="310" cy="95"  r="3.5"/>
+              <circle cx="390" cy="60"  r="3.5"/>
+              <circle cx="470" cy="50"  r="3.5"/>
+              <circle cx="540" cy="30"  r="4.5" fill="#d4542c" stroke="#fff" stroke-width="2"/>
+            </g>
+            <!-- 当前值气泡 -->
+            <g transform="translate(500, 6)">
+              <rect width="58" height="20" rx="4" fill="#1a1814"/>
+              <text x="29" y="14" font-size="10" fill="#f0a880" text-anchor="middle" font-weight="700">198.4 万</text>
+            </g>
+
+            <defs>
+              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#b8431f"/>
+                <stop offset="100%" stop-color="#b8431f" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">流量来源分布</div>
+        <div class="chart-sub">番外内容的主要发现入口</div>
+        <div style="padding-top:8px;">
+          <div class="bar-row">
+            <span class="bar-label">详情页番外 Tab</span>
+            <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+            <span class="bar-val">65.2%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">首页番外专区</span>
+            <div class="bar-track"><div class="bar-fill" style="width:22%"></div></div>
+            <span class="bar-val">21.8%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">弹幕浮窗</span>
+            <div class="bar-track"><div class="bar-fill" style="width:13%"></div></div>
+            <span class="bar-val">13.0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 热门作品排行 -->
+    <div class="chart-card">
+      <div class="chart-title">热门作品 TOP 5 · 近 7 天</div>
+      <div class="chart-sub">按播放量排序,点击查看详细数据</div>
+
+      <table class="table" style="box-shadow:none;border:none;margin-top:12px;">
+        <thead>
+          <tr>
+            <th style="width:8%">排名</th>
+            <th style="width:34%">作品</th>
+            <th>播放量</th>
+            <th>完播率</th>
+            <th>互动率</th>
+            <th>ROI</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-family:var(--font-cn-serif);font-size:22px;font-weight:700;color:var(--accent);">1</td>
+            <td>
+              <span class="cover"><span class="cover-img" style="background-image:url('assets/qingdi.webp');"></span></span>
+              <b>《御前对奏》</b>
+            </td>
+            <td class="num">320.8万</td>
+            <td class="num">76%</td>
+            <td class="num">8.4%</td>
+            <td class="num">3.9×</td>
+            <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">详情 →</a></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-cn-serif);font-size:22px;font-weight:700;color:var(--accent);">2</td>
+            <td>
+              <span class="cover"><span class="cover-img" style="background-image:url('assets/linwaner.webp');"></span></span>
+              <b>《婉儿的鸡腿外传》</b>
+            </td>
+            <td class="num">156.2万</td>
+            <td class="num">85%</td>
+            <td class="num">12.1%</td>
+            <td class="num">5.3×</td>
+            <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">详情 →</a></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-cn-serif);font-size:22px;font-weight:700;color:var(--accent);">3</td>
+            <td>
+              <span class="cover"><span class="cover-img" style="background-image:url('assets/fanxian.webp');"></span></span>
+              <b>《一盏参汤暖人间》</b>
+            </td>
+            <td class="num">128.4万</td>
+            <td class="num">78%</td>
+            <td class="num">9.8%</td>
+            <td class="num">4.2×</td>
+            <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">详情 →</a></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-cn-serif);font-size:22px;font-weight:700;color:var(--ink-dim);">4</td>
+            <td>
+              <span class="cover"><span class="cover-img" style="background-image:url('assets/zhanggongzhu.webp');"></span></span>
+              <b>《长公主的茶事》</b>
+            </td>
+            <td class="num">98.7万</td>
+            <td class="num">74%</td>
+            <td class="num">7.2%</td>
+            <td class="num">4.0×</td>
+            <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">详情 →</a></td>
+          </tr>
+          <tr>
+            <td style="font-family:var(--font-cn-serif);font-size:22px;font-weight:700;color:var(--ink-dim);">5</td>
+            <td>
+              <span class="cover"><span class="cover-img" style="background-image:url('assets/wangqinian.webp');"></span></span>
+              <b>《王启年的家庭日常》</b>
+            </td>
+            <td class="num">89.6万</td>
+            <td class="num">82%</td>
+            <td class="num">10.3%</td>
+            <td class="num">4.8×</td>
+            <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">详情 →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 观众画像 -->
+    <div class="three-col">
+      <div class="chart-card">
+        <div class="chart-title">观众性别</div>
+        <div class="chart-sub">累计用户 642 万</div>
+        <svg viewBox="0 0 200 160" style="width:100%;height:180px;">
+          <!-- 女 68% 弧 -->
+          <path d="M 100 80 m -60 0 a 60 60 0 1 1 120 0 a 60 60 0 1 1 -120 0" fill="none" stroke="#f4f2ec" stroke-width="18"/>
+          <path d="M 100 80 m 0 -60 a 60 60 0 0 1 47.6 96.9" stroke="#b8431f" stroke-width="18" fill="none" stroke-linecap="round"/>
+          <text x="100" y="78" text-anchor="middle" font-size="26" font-family="Noto Serif SC" font-weight="700" fill="#1a1814">68%</text>
+          <text x="100" y="96" text-anchor="middle" font-size="10" fill="#6b6555">女性观众</text>
+        </svg>
+        <div style="display:flex;justify-content:space-around;margin-top:10px;font-size:12px;">
+          <span style="color:var(--accent);font-weight:600;">● 女 68%</span>
+          <span style="color:var(--ink-soft);">● 男 32%</span>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">年龄分布</div>
+        <div class="chart-sub">核心用户 25-34 岁</div>
+        <div style="padding-top:12px;">
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">18-24</span>
+            <div class="bar-track"><div class="bar-fill" style="width:24%"></div></div>
+            <span class="bar-val">24%</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">25-34</span>
+            <div class="bar-track"><div class="bar-fill" style="width:46%"></div></div>
+            <span class="bar-val">46%</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">35-44</span>
+            <div class="bar-track"><div class="bar-fill" style="width:22%"></div></div>
+            <span class="bar-val">22%</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">45+</span>
+            <div class="bar-track"><div class="bar-fill" style="width:8%"></div></div>
+            <span class="bar-val">8%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">地域分布 TOP 5</div>
+        <div class="chart-sub">一线城市占比 47%</div>
+        <div style="padding-top:12px;">
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">上海</span>
+            <div class="bar-track"><div class="bar-fill" style="width:18%"></div></div>
+            <span class="bar-val">18%</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">北京</span>
+            <div class="bar-track"><div class="bar-fill" style="width:14%"></div></div>
+            <span class="bar-val">14%</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">广州</span>
+            <div class="bar-track"><div class="bar-fill" style="width:9%"></div></div>
+            <span class="bar-val">9%</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">深圳</span>
+            <div class="bar-track"><div class="bar-fill" style="width:7%"></div></div>
+            <span class="bar-val">7%</span>
+          </div>
+          <div class="bar-row" style="grid-template-columns:70px 1fr 56px;">
+            <span class="bar-label">杭州</span>
+            <div class="bar-track"><div class="bar-fill" style="width:6%"></div></div>
+            <span class="bar-val">6%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="sidebar.js"></script>
+<script src="common.js"></script>
+
+</body>
+</html>
