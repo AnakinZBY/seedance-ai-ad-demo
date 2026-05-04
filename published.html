@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>已投放 · 腾讯视频 AD Studio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="published">
+
+<div class="app">
+  <div id="sidebar-mount"></div>
+
+  <main class="main">
+
+    <div class="breadcrumb">
+      <span>创作</span>
+      <span class="sep">›</span>
+      <span>已投放</span>
+    </div>
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">已投放作品</h1>
+        <p class="page-sub">所有已提交审核、审核通过、正在投放、下线归档的番外作品</p>
+      </div>
+      <div>
+        <button class="btn btn-ghost" data-toast="已导出 Excel 到下载目录">📊 导出数据</button>
+        <a class="btn btn-primary" href="dashboard.html" style="text-decoration:none;">进入投放看板 →</a>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi accent">
+        <div class="kpi-label">正在投放</div>
+        <div class="kpi-val">4<span class="unit">条</span></div>
+        <div class="kpi-trend up">本周 +1</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">审核中</div>
+        <div class="kpi-val">2<span class="unit">条</span></div>
+        <div class="kpi-trend up">待四方签字</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">累计播放</div>
+        <div class="kpi-val">1,284<span class="unit">万</span></div>
+        <div class="kpi-trend up">↑ 本月 +42%</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">累计投入</div>
+        <div class="kpi-val">¥186.5<span class="unit">万</span></div>
+        <div class="kpi-trend up">ROI 4.1× 平均</div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search">
+        <input type="text" placeholder="搜索作品名、IP、状态...">
+      </div>
+      <div class="filter-group">
+        <button class="chip active">全部 8</button>
+        <button class="chip">投放中 4</button>
+        <button class="chip">审核中 2</button>
+        <button class="chip">已下线 2</button>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width:30%">作品</th>
+          <th>状态</th>
+          <th>上线时间</th>
+          <th>投入</th>
+          <th>播放量</th>
+          <th>完播率</th>
+          <th>ROI</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/fanxian.webp');"></span></span>
+            <b>《一盏参汤暖人间》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 东方参源</span>
+          </td>
+          <td><span class="badge badge-live">投放中</span></td>
+          <td class="mono">2026-04-26</td>
+          <td class="num">¥24.8万</td>
+          <td class="num">128.4万</td>
+          <td class="num">78%</td>
+          <td class="num">4.2×</td>
+          <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">查看数据 →</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/wangqinian.webp');"></span></span>
+            <b>《王启年的家庭日常》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 某家居品牌</span>
+          </td>
+          <td><span class="badge badge-live">投放中</span></td>
+          <td class="mono">2026-04-20</td>
+          <td class="num">¥18.2万</td>
+          <td class="num">89.6万</td>
+          <td class="num">82%</td>
+          <td class="num">4.8×</td>
+          <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">查看数据 →</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/linwaner.webp');"></span></span>
+            <b>《婉儿的鸡腿外传》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 某零食品牌</span>
+          </td>
+          <td><span class="badge badge-live">投放中</span></td>
+          <td class="mono">2026-04-15</td>
+          <td class="num">¥15.6万</td>
+          <td class="num">156.2万</td>
+          <td class="num">85%</td>
+          <td class="num">5.3×</td>
+          <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">查看数据 →</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/qingdi.webp');"></span></span>
+            <b>《御前对奏》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 金融品牌</span>
+          </td>
+          <td><span class="badge badge-live">投放中</span></td>
+          <td class="mono">2026-04-10</td>
+          <td class="num">¥42.0万</td>
+          <td class="num">320.8万</td>
+          <td class="num">76%</td>
+          <td class="num">3.9×</td>
+          <td><a href="analytics.html" style="color:var(--accent);font-size:12px;text-decoration:none;">查看数据 →</a></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/haitang.webp');"></span></span>
+            <b>《北齐月夜·长歌未尽》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 东方参源</span>
+          </td>
+          <td><span class="badge badge-reviewing">四方审核中</span></td>
+          <td class="mono">预计 05-02</td>
+          <td class="num">¥22.4万</td>
+          <td class="mono" style="color:var(--ink-dim);">—</td>
+          <td class="mono" style="color:var(--ink-dim);">—</td>
+          <td class="mono" style="color:var(--ink-dim);">—</td>
+          <td><span class="mono" style="font-size:11px;color:var(--ink-dim);">3/4 已签字</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/fansize.webp');"></span></span>
+            <b>《除夕夜·范府团圆宴》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 东方参源 · 春节档</span>
+          </td>
+          <td><span class="badge badge-reviewing">排期中</span></td>
+          <td class="mono">2027-02-09(除夕前)</td>
+          <td class="num">¥48.6万</td>
+          <td class="mono" style="color:var(--ink-dim);">—</td>
+          <td class="mono" style="color:var(--ink-dim);">—</td>
+          <td class="mono" style="color:var(--ink-dim);">—</td>
+          <td><span class="mono" style="font-size:11px;color:var(--ink-dim);">已冻结预算</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/yanbingyun.webp');"></span></span>
+            <b>《冰雪长歌》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 运动品牌</span>
+          </td>
+          <td><span class="badge badge-offline">已下线</span></td>
+          <td class="mono">2026-02-14 ~ 03-20</td>
+          <td class="num">¥14.9万</td>
+          <td class="num">62.3万</td>
+          <td class="num">71%</td>
+          <td class="num">3.2×</td>
+          <td><button class="btn btn-ghost" style="padding:4px 10px;font-size:11px;" data-toast="已发起续投申请">续投</button></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="cover"><span class="cover-img" style="background-image:url('assets/zhanggongzhu.webp');"></span></span>
+            <b>《长公主的茶事》</b><br>
+            <span class="mono" style="color:var(--ink-dim);">《庆余年》× 某茶饮品牌</span>
+          </td>
+          <td><span class="badge badge-offline">已下线</span></td>
+          <td class="mono">2026-01-08 ~ 02-08</td>
+          <td class="num">¥16.2万</td>
+          <td class="num">98.7万</td>
+          <td class="num">74%</td>
+          <td class="num">4.0×</td>
+          <td><button class="btn btn-ghost" style="padding:4px 10px;font-size:11px;" data-toast="已发起续投申请">续投</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+</div>
+
+<script src="sidebar.js"></script>
+<script src="common.js"></script>
+
+</body>
+</html>
