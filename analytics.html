@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成效分析 · 腾讯视频 AD Studio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="analytics">
+
+<div class="app">
+  <div id="sidebar-mount"></div>
+
+  <main class="main">
+
+    <div class="breadcrumb">
+      <span>数据</span>
+      <span class="sep">›</span>
+      <span>成效分析</span>
+      <span class="sep">›</span>
+      <span>一盏参汤暖人间</span>
+    </div>
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">《一盏参汤暖人间》 · 深度分析</h1>
+        <p class="page-sub">上线 <b>2 天 · 2026-04-26 10:00</b> · 投放中 · 对标行业前贴片 TVC</p>
+      </div>
+      <div>
+        <select class="select" style="width:240px;">
+          <option>《一盏参汤暖人间》· 04-26 上线</option>
+          <option>《王启年的家庭日常》· 04-20</option>
+          <option>《婉儿的鸡腿外传》· 04-15</option>
+          <option>《御前对奏》· 04-10</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 核心对标 -->
+    <div class="kpi-grid">
+      <div class="kpi accent">
+        <div class="kpi-label">完播率</div>
+        <div class="kpi-val">78<span class="unit">%</span></div>
+        <div class="kpi-trend up">vs TVC 前贴片 23% · ↑ 3.4×</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">主动搜索率</div>
+        <div class="kpi-val">41<span class="unit">%</span></div>
+        <div class="kpi-trend up">41% 用户主动搜"番外"</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">品牌搜索提升</div>
+        <div class="kpi-val">+217<span class="unit">%</span></div>
+        <div class="kpi-trend up">"东方参源"微信指数</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">ROI(含后链路)</div>
+        <div class="kpi-val">4.2<span class="unit">×</span></div>
+        <div class="kpi-trend up">行业 TVC 平均 1.4×</div>
+      </div>
+    </div>
+
+    <!-- 播放曲线 + 留存 -->
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">播放曲线 · 48 小时</div>
+        <div class="chart-sub">首日 24h 达成 67% 峰值 · 冷启动期极短</div>
+        <div class="chart-area">
+          <svg class="chart-svg" viewBox="0 0 560 220" preserveAspectRatio="none">
+            <line x1="40" y1="30"  x2="550" y2="30"  stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <line x1="40" y1="75"  x2="550" y2="75"  stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <line x1="40" y1="120" x2="550" y2="120" stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <line x1="40" y1="165" x2="550" y2="165" stroke="#ebe8df" stroke-dasharray="2 4"/>
+            <text x="6" y="34"  font-size="10" fill="#a39c88">150</text>
+            <text x="6" y="79"  font-size="10" fill="#a39c88">100</text>
+            <text x="6" y="124" font-size="10" fill="#a39c88">50</text>
+            <text x="6" y="169" font-size="10" fill="#a39c88">20</text>
+            <text x="50"  y="210" font-size="10" fill="#a39c88">04-26 10:00</text>
+            <text x="200" y="210" font-size="10" fill="#a39c88">04-26 22:00</text>
+            <text x="350" y="210" font-size="10" fill="#a39c88">04-27 10:00</text>
+            <text x="485" y="210" font-size="10" fill="#a39c88">04-28 10:00</text>
+
+            <path d="M 60,190 L 110,170 L 170,120 L 230,60 L 290,50 L 350,80 L 410,60 L 470,45 L 540,35
+                     L 540,200 L 60,200 Z"
+                  fill="url(#analyticsGrad)" opacity="0.28"/>
+            <path d="M 60,190 L 110,170 L 170,120 L 230,60 L 290,50 L 350,80 L 410,60 L 470,45 L 540,35"
+                  stroke="#b8431f" stroke-width="2.5" fill="none"/>
+
+            <!-- 二次推荐 annotation -->
+            <line x1="290" y1="50" x2="290" y2="14" stroke="#8d6f3a" stroke-dasharray="2 3"/>
+            <g transform="translate(240, 2)">
+              <rect width="100" height="14" rx="3" fill="#8d6f3a"/>
+              <text x="50" y="11" font-size="9" fill="#fff" text-anchor="middle">二次推荐算法激活</text>
+            </g>
+
+            <defs>
+              <linearGradient id="analyticsGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#b8431f"/>
+                <stop offset="100%" stop-color="#b8431f" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">分幕留存曲线</div>
+        <div class="chart-sub">3 幕结构的观众流失节点</div>
+        <div style="padding-top:12px;">
+          <div class="bar-row">
+            <span class="bar-label">开场 0-15"</span>
+            <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+            <span class="bar-val">100%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">壹幕 0:45"</span>
+            <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            <span class="bar-val">92%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">贰幕 2:15"</span>
+            <div class="bar-track"><div class="bar-fill" style="width:86%"></div></div>
+            <span class="bar-val">86%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label" style="color:var(--accent);">品牌特写 1:58</span>
+            <div class="bar-track"><div class="bar-fill" style="width:84%"></div></div>
+            <span class="bar-val">84%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">叁幕 2:45"</span>
+            <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+            <span class="bar-val">80%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">完播 3:00"</span>
+            <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+            <span class="bar-val">78%</span>
+          </div>
+        </div>
+        <div style="background:var(--success-soft);border:1px solid #c9d8a9;border-radius:6px;padding:10px 14px;font-size:11px;color:var(--success);margin-top:14px;line-height:1.6;">
+          <b>💡 AI 洞察</b>:品牌特写时观众流失仅 2%,远低于传统广告 30-40% 的流失。"兄弟送参汤"的情节张力承接住了品牌露出。
+        </div>
+      </div>
+    </div>
+
+    <!-- 互动热度 + 情感分析 -->
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">互动行为分布</div>
+        <div class="chart-sub">合计互动 12.6 万次 · 互动率 9.8%</div>
+        <div style="padding-top:12px;">
+          <div class="bar-row">
+            <span class="bar-label">点赞</span>
+            <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+            <span class="bar-val">8.2 万</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">评论</span>
+            <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+            <span class="bar-val">2.5 万</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">转发</span>
+            <div class="bar-track"><div class="bar-fill" style="width:10%"></div></div>
+            <span class="bar-val">1.3 万</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">收藏</span>
+            <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+            <span class="bar-val">0.6 万</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-title">弹幕情感分析</div>
+        <div class="chart-sub">AI 抽取 2.5 万条评论关键词</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;padding:20px 0;align-items:center;justify-content:center;">
+          <span style="font-size:28px;color:var(--accent);font-family:var(--font-cn-serif);font-weight:700;">温情</span>
+          <span style="font-size:20px;color:#8d6f3a;font-family:var(--font-cn-serif);">兄弟情</span>
+          <span style="font-size:26px;color:var(--accent-glow);font-family:var(--font-cn-serif);font-weight:700;">想喝</span>
+          <span style="font-size:16px;color:var(--ink-soft);">范思辙好贴心</span>
+          <span style="font-size:22px;color:#8d6f3a;font-family:var(--font-cn-serif);">补</span>
+          <span style="font-size:14px;color:var(--ink-soft);">熬夜党的福音</span>
+          <span style="font-size:18px;color:var(--accent);font-family:var(--font-cn-serif);">想看番外 2</span>
+          <span style="font-size:14px;color:var(--ink-soft);">不腻</span>
+          <span style="font-size:20px;color:var(--accent-glow);font-family:var(--font-cn-serif);">买它</span>
+          <span style="font-size:13px;color:var(--ink-dim);">这广告我服</span>
+          <span style="font-size:16px;color:#8d6f3a;">催更</span>
+        </div>
+        <div style="border-top:1px dashed var(--border);padding-top:12px;display:flex;justify-content:space-around;font-size:12px;">
+          <span style="color:var(--success);font-weight:600;">● 正向 91%</span>
+          <span style="color:var(--ink-soft);">● 中性 7%</span>
+          <span style="color:var(--accent);font-weight:600;">● 负面 2%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 转化漏斗 -->
+    <div class="chart-card">
+      <div class="chart-title">转化漏斗 · 从观看到购买</div>
+      <div class="chart-sub">追踪用户从番外到品牌购买的全链路</div>
+      <div style="padding:20px 40px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+          <div style="flex:1;background:linear-gradient(135deg, var(--accent), var(--accent-glow));color:#fff;padding:18px;border-radius:8px;text-align:center;">
+            <div style="font-size:10px;opacity:0.9;letter-spacing:0.1em;">观看完整</div>
+            <div style="font-family:var(--font-cn-serif);font-size:24px;font-weight:700;margin:4px 0;">100.1 万</div>
+            <div style="font-size:11px;opacity:0.9;">占总播放 78%</div>
+          </div>
+          <span style="color:var(--ink-dim);font-size:16px;">→</span>
+          <div style="flex:1;background:linear-gradient(135deg, #c0562d, #d67c4f);color:#fff;padding:18px;border-radius:8px;text-align:center;">
+            <div style="font-size:10px;opacity:0.9;letter-spacing:0.1em;">品牌搜索</div>
+            <div style="font-family:var(--font-cn-serif);font-size:24px;font-weight:700;margin:4px 0;">41.3 万</div>
+            <div style="font-size:11px;opacity:0.9;">转化 41.3%</div>
+          </div>
+          <span style="color:var(--ink-dim);font-size:16px;">→</span>
+          <div style="flex:1;background:linear-gradient(135deg, #c88f4a, #d9a872);color:#fff;padding:18px;border-radius:8px;text-align:center;">
+            <div style="font-size:10px;opacity:0.9;letter-spacing:0.1em;">进入商品页</div>
+            <div style="font-family:var(--font-cn-serif);font-size:24px;font-weight:700;margin:4px 0;">18.7 万</div>
+            <div style="font-size:11px;opacity:0.9;">转化 45.3%</div>
+          </div>
+          <span style="color:var(--ink-dim);font-size:16px;">→</span>
+          <div style="flex:1;background:linear-gradient(135deg, #8d6f3a, #a88550);color:#fff;padding:18px;border-radius:8px;text-align:center;">
+            <div style="font-size:10px;opacity:0.9;letter-spacing:0.1em;">加入购物车</div>
+            <div style="font-family:var(--font-cn-serif);font-size:24px;font-weight:700;margin:4px 0;">6.2 万</div>
+            <div style="font-size:11px;opacity:0.9;">转化 33.2%</div>
+          </div>
+          <span style="color:var(--ink-dim);font-size:16px;">→</span>
+          <div style="flex:1;background:linear-gradient(135deg, #5d7a3d, #769854);color:#fff;padding:18px;border-radius:8px;text-align:center;">
+            <div style="font-size:10px;opacity:0.9;letter-spacing:0.1em;">支付成交</div>
+            <div style="font-family:var(--font-cn-serif);font-size:24px;font-weight:700;margin:4px 0;">2.9 万</div>
+            <div style="font-size:11px;opacity:0.9;">GMV 104 万</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI 优化建议 -->
+    <div class="chart-card">
+      <div class="chart-title">AI 下一步建议</div>
+      <div class="chart-sub">基于本次数据,AI 推荐 3 个优化方向</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;">
+        <div style="padding:16px 18px;background:linear-gradient(135deg, var(--accent-soft), #fff);border:1px solid #f3c5b1;border-radius:8px;">
+          <div style="font-size:11px;color:var(--accent);font-weight:700;letter-spacing:0.1em;margin-bottom:6px;">💡 建议 1 · 续投</div>
+          <b style="font-family:var(--font-cn-serif);font-size:14px;color:var(--ink);display:block;margin-bottom:6px;">追投 300 万曝光</b>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.6;">当前热度仍在上升,追投 ¥5.5 万可再带来 ≈ 80 万播放,边际 ROI 预估 4.8×</div>
+        </div>
+        <div style="padding:16px 18px;background:linear-gradient(135deg, var(--gold-soft), #fff);border:1px solid #e8d8b0;border-radius:8px;">
+          <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:0.1em;margin-bottom:6px;">💡 建议 2 · 复用</div>
+          <b style="font-family:var(--font-cn-serif);font-size:14px;color:var(--ink);display:block;margin-bottom:6px;">生成系列番外 2</b>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.6;">弹幕 32% 评论"求番外 2",可生成《参汤的第二天早晨》延续叙事,预估 ROI 5.0×</div>
+        </div>
+        <div style="padding:16px 18px;background:linear-gradient(135deg, var(--success-soft), #fff);border:1px solid #c9d8a9;border-radius:8px;">
+          <div style="font-size:11px;color:var(--success);font-weight:700;letter-spacing:0.1em;margin-bottom:6px;">💡 建议 3 · 联动</div>
+          <b style="font-family:var(--font-cn-serif);font-size:14px;color:var(--ink);display:block;margin-bottom:6px;">电商站内引流</b>
+          <div style="font-size:12px;color:var(--ink-soft);line-height:1.6;">18.7 万进入商品页但未加购,建议设置限时券,预估可额外带来 1.8 万订单</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="sidebar.js"></script>
+<script src="common.js"></script>
+
+</body>
+</html>
