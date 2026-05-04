@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发票 &amp; 结算 · 腾讯视频 AD Studio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="billing">
+
+<div class="app">
+  <div id="sidebar-mount"></div>
+
+  <main class="main">
+
+    <div class="breadcrumb">
+      <span>账户</span>
+      <span class="sep">›</span>
+      <span>发票 &amp; 结算</span>
+    </div>
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">发票 &amp; 结算</h1>
+        <p class="page-sub">账户余额、充值记录、发票申请 · 月结周期:每月 1 日出账</p>
+      </div>
+      <div>
+        <button class="btn btn-secondary" data-toast="跳转到财务对接页">📞 联系财务</button>
+        <button class="btn btn-primary" data-toast="进入充值页面 · 支持对公转账">💳 立即充值</button>
+      </div>
+    </div>
+
+    <!-- 余额卡片 -->
+    <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:14px;margin-bottom:22px;">
+      <div style="background:linear-gradient(135deg,#1c1914,#3a2614);color:#e8e0d0;border-radius:12px;padding:24px 28px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-20px;right:-20px;width:160px;height:160px;background:radial-gradient(circle,rgba(212,84,44,0.2),transparent 70%);"></div>
+        <div style="font-size:11px;color:#8d8573;letter-spacing:0.15em;margin-bottom:12px;text-transform:uppercase;">可用余额</div>
+        <div style="font-family:var(--font-cn-serif);font-size:42px;font-weight:700;line-height:1;margin-bottom:8px;background:linear-gradient(135deg,#fff,#d4a574);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+          ¥ 285.6<span style="font-size:20px;">万</span>
+        </div>
+        <div style="font-size:12px;color:#a69c85;">可支持 11 条中等规模番外投放</div>
+        <div style="position:absolute;bottom:20px;right:24px;font-size:10px;color:#8d8573;font-family:var(--font-mono);letter-spacing:0.05em;">VIP 企业账户</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi-label">已冻结</div>
+        <div class="kpi-val">¥71.0<span class="unit">万</span></div>
+        <div class="kpi-trend down">2 条订单审核中</div>
+      </div>
+      <div class="kpi gold">
+        <div class="kpi-label">信用额度</div>
+        <div class="kpi-val">¥100<span class="unit">万</span></div>
+        <div class="kpi-trend up">VIP 月结额度</div>
+      </div>
+    </div>
+
+    <!-- 充值 / 消费流水 -->
+    <div class="two-col" style="grid-template-columns: 1.4fr 1fr;">
+      <div class="chart-card">
+        <div class="chart-title">近期交易流水</div>
+        <div class="chart-sub">显示近 30 天所有充值与消费 · 点击查看详情</div>
+
+        <div style="margin-top:14px;">
+          <div class="transaction">
+            <div class="tx-icon consume">💸</div>
+            <div class="tx-body">
+              <b>订单支付 · 《一盏参汤暖人间》</b>
+              <span>交易号 TX202604280012 · 4 方审核通过后划账</span>
+            </div>
+            <div class="tx-amount minus">- ¥24.8 万</div>
+            <div class="tx-date">04-28 14:32</div>
+          </div>
+          <div class="transaction">
+            <div class="tx-icon consume">💸</div>
+            <div class="tx-body">
+              <b>订单冻结 · 《北齐月夜·长歌未尽》</b>
+              <span>交易号 TX202604270089 · 审核中,预授权冻结</span>
+            </div>
+            <div class="tx-amount minus">- ¥22.4 万</div>
+            <div class="tx-date">04-27 16:40</div>
+          </div>
+          <div class="transaction">
+            <div class="tx-icon consume">💸</div>
+            <div class="tx-body">
+              <b>订单冻结 · 《除夕夜·范府团圆宴》</b>
+              <span>交易号 TX202604261234 · 春节档排期 · 资金冻结</span>
+            </div>
+            <div class="tx-amount minus">- ¥48.6 万</div>
+            <div class="tx-date">04-26 11:22</div>
+          </div>
+          <div class="transaction">
+            <div class="tx-icon recharge">💰</div>
+            <div class="tx-body">
+              <b>对公转账充值</b>
+              <span>招商银行 · 北京分行 · 商户到账</span>
+            </div>
+            <div class="tx-amount plus">+ ¥300.0 万</div>
+            <div class="tx-date">04-24 09:15</div>
+          </div>
+          <div class="transaction">
+            <div class="tx-icon consume">💸</div>
+            <div class="tx-body">
+              <b>订单支付 · 《王启年的家庭日常》</b>
+              <span>交易号 TX202604180067 · 已上线</span>
+            </div>
+            <div class="tx-amount minus">- ¥18.2 万</div>
+            <div class="tx-date">04-18 10:00</div>
+          </div>
+          <div class="transaction">
+            <div class="tx-icon invoice">📑</div>
+            <div class="tx-body">
+              <b>增值税专用发票已开具</b>
+              <span>发票号 010026040801 · 金额 ¥18.2 万</span>
+            </div>
+            <div class="tx-amount" style="color:var(--gold);">¥ 18.2 万</div>
+            <div class="tx-date">04-19 15:30</div>
+          </div>
+          <div class="transaction">
+            <div class="tx-icon consume">💸</div>
+            <div class="tx-body">
+              <b>订单支付 · 《婉儿的鸡腿外传》</b>
+              <span>交易号 TX202604150023 · 已上线</span>
+            </div>
+            <div class="tx-amount minus">- ¥15.6 万</div>
+            <div class="tx-date">04-15 11:48</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;padding:14px 0;">
+          <button class="btn btn-ghost" data-toast="已加载更多记录" style="font-size:12px;">查看全部流水 →</button>
+        </div>
+      </div>
+
+      <div>
+        <!-- 发票信息 -->
+        <div class="chart-card" style="margin-bottom:14px;">
+          <div class="chart-title">发票信息</div>
+          <div class="chart-sub">用于所有订单的发票开具</div>
+          <div class="info-grid" style="grid-template-columns:1fr;">
+            <div style="border-right:none;">
+              <div class="info-label">抬头</div>
+              <div class="info-val" style="font-size:13px;">东方参源(北京)健康科技有限公司</div>
+            </div>
+            <div style="border-right:none;">
+              <div class="info-label">税号</div>
+              <div class="info-val mono" style="font-family:var(--font-mono);font-size:12px;">91110108MA01*******T</div>
+            </div>
+            <div style="border-right:none;">
+              <div class="info-label">发票类型</div>
+              <div class="info-val"><span class="badge badge-reviewing" style="background:var(--gold-soft);color:var(--gold);border-color:#e8d8b0;">增值税专用发票</span></div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" data-toast="进入发票信息修改页" style="width:100%;margin-top:12px;padding:10px;font-size:12px;">✎ 修改发票信息</button>
+        </div>
+
+        <!-- 发票申请 -->
+        <div class="chart-card">
+          <div class="chart-title">本月可申请</div>
+          <div class="chart-sub">以下订单尚未开票</div>
+          <div style="margin-top:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed var(--border);font-size:13px;">
+              <div>
+                <b style="color:var(--ink);display:block;margin-bottom:2px;">《御前对奏》</b>
+                <span style="font-size:11px;color:var(--ink-dim);">已上线 04-10</span>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-family:var(--font-cn-serif);font-weight:700;color:var(--accent);font-size:14px;">¥42.0万</div>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed var(--border);font-size:13px;">
+              <div>
+                <b style="color:var(--ink);display:block;margin-bottom:2px;">《一盏参汤暖人间》</b>
+                <span style="font-size:11px;color:var(--ink-dim);">已上线 04-26</span>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-family:var(--font-cn-serif);font-weight:700;color:var(--accent);font-size:14px;">¥24.8万</div>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:13px;border-top:2px solid var(--accent);margin-top:4px;">
+              <b style="color:var(--ink);">合计</b>
+              <div style="font-family:var(--font-cn-serif);font-weight:700;color:var(--accent);font-size:20px;">¥66.8 万</div>
+            </div>
+          </div>
+          <button class="btn btn-primary" data-toast="已提交开票申请 · 预计 3-5 个工作日寄出" style="width:100%;padding:11px;font-size:13px;margin-top:8px;">📑 一键申请开票</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 结算说明 -->
+    <div class="disclaimer" style="margin-top:10px;">
+      <b>💡 结算规则说明</b><br>
+      · 订单提交后资金预冻结,四方审核通过后进入正式扣款;任一方驳回订单,资金原路退回;<br>
+      · 每月 1 日系统自动出账,可在 <b>发票信息</b> 完善抬头后一键申请开票;<br>
+      · VIP 企业账户享有 <b>¥100 万信用额度</b>,支持先消费后付款(月结 30 天);<br>
+      · 对公转账充值 1-2 工作日到账;支付宝/微信实时到账(单笔上限 50 万)。
+    </div>
+
+  </main>
+</div>
+
+<script src="sidebar.js"></script>
+<script src="common.js"></script>
+
+</body>
+</html>
